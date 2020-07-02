@@ -16,11 +16,15 @@ Contact: jhmoore@upenn.edu
 
 ### get_data.py
 
-A simple command line tool to select and format data from the original files
+A simple command line script to select and format data from the original files
 
 ### process_gene_sets.py
 
 A script to convert gene set information from GMT format into a format that is compatible with the TPOT Feature Set Selector.  This also makes plots related to the number of bins and the number of genes in each bin (used for figure 1 in the paper).
+
+### regress_covariates.py
+
+A command line script to regress the phenotypes against the covariates, saving and plotting the residuals to be used in further analysis
 
 ### run_tpot_exome_residuals.py
 
@@ -73,3 +77,11 @@ A PBS job script to run the 'run_tpot_exome_residuals.py' script in parallel a n
 ### run_permutations.pbs
 
 Same as run_replicates, but calling the permutation script instead.
+
+## Supplemental Data
+
+Supplemental data referred to in the paper
+
+  - A figure showing results of testing with different TPOT settings
+  - Figures showing the phenotype and residual distributions
+  - Tables of feature importance for all bins from the top 10 pipelines
