@@ -1,0 +1,95 @@
+#!/bin/bash
+
+#PBS -l nodes=1:ppn=20
+#PBS -l walltime=72:00:00
+#PBS -l pmem=12gb
+#PBS -A mah546_a_g_sc_default
+
+# Get started
+echo "Job started on $(hostname) at $(date)"
+
+# Set encoding
+export LC_ALL=en_US.utf-8
+export LANG=en_US.utf-8
+
+# Go to the correct place
+cd "$PBS_O_WORKDIR" || exit
+
+# Load conda and activate the environment
+module load python/3.6.3-anaconda5.0.1
+source activate /storage/work/j/jrm5100/python_venvs/venv_tpot
+
+# Copy data
+mkdir -p data
+cp -r /gpfs/group/mah546/default/datasets/ACTG/* ./data
+
+# Set analysis params
+PHENOTYPE_FILE=./data/2016_11_13_ACTG_MASTER_phenos_share_w_MollyLab.txt
+POPULATION_SIZE=100
+GENERATIONS=100
+RANDOM_SEED=1855
+
+# define run
+task() {
+
+    # Takes PHENOTYPE and REP_NUM arguments
+    OUTPUT_FOLDER="${PHENOTYPE}_${REP_NUM}"
+    mkdir -p $OUTPUT_FOLDER
+    
+    # Create checkpoint folder
+    CHECKPOINT_FOLDER="${OUTPUT_FOLDER}/checkpoint_pipelines_${PHENOTYPE}"
+    mkdir -p $CHECKPOINT_FOLDER
+
+    # Run the script, specifying a max running time rather than a number of generations
+    /usr/bin/time -v python run_tpot_exome_residuals_permuted.py $PHENOTYPE\
+                                        --population $POPULATION_SIZE\
+                                        --generations $GENERATIONS\
+                                        --gene_set_file ./data/gene_sets/csv/exome_c7.all.v7.0.symbols.csv\
+                                        --gene_set_count 1\
+                                        --random_seed $REP_NUM\
+                                        --checkpoint_folder $CHECKPOINT_FOLDER\
+                                        --output_folder $OUTPUT_FOLDER
+
+    echo "Finished running TPOT for ${PHENOTYPE} Rep ${REP_NUM} at $(date)"
+}
+
+# Run jobs in paralell
+# From https://unix.stackexchange.com/questions/103920/parallelize-a-bash-for-loop
+# initialize a semaphore with a given number of tokens
+open_sem(){
+    mkfifo pipe-$$
+    exec 3<>pipe-$$
+    rm pipe-$$
+    local i=$1
+    for((;i>0;i--)); do
+        printf %s 000 >&3
+    done
+}
+
+# run the given command asynchronously and pop/push tokens
+run_with_lock(){
+    local x
+    # this read waits until there is something to read
+    read -u 3 -n 3 x && ((0==x)) || exit $x
+    (
+     ( "$@"; )
+    # push the return code of the command to the semaphore
+    printf '%.3d' $? >&3
+    )&
+}
+
+
+N=6  # How many jobs to run at one time (total jobs = replications * number of phenotypes)
+open_sem $N
+for ((REP_NUM=76; REP_NUM<=100; REP_NUM++)); do
+    for PHENOTYPE in p_cd4difw48w4 p_logtbilw0 vllogdifw48w4; do
+        run_with_lock task "$PHENOTYPE" "$REP_NUM"
+    done
+done
+wait  # let final set of jobs finish running
+
+# Delete data folder
+rm -rf data
+
+# Finish up
+echo "Job Ended at $(date)"
