@@ -42,8 +42,8 @@ The same as above, with an additional line that permutes the phenotype data befo
 ### score_pipelines.py
 
   1) Load and score the optimized pipelines (100 replicate and 100 permuted)
-  2) Save pipeline information (structure, selected feature set) and scores
-  3) Generate feature importances 100 times for the top ten (non-permuted) pipelines and save the results
+  2) Save pipeline information (structure, selected feature set) and scores (used in figure 3).
+  3) Generate feature importances 100 times for the top ten (non-permuted) pipelines and save the results (used in figure 4).
 
 ### reformat_feature_importance.py
 
@@ -91,3 +91,7 @@ Supplemental data referred to in the paper
   - A figure showing results of testing with different TPOT settings
   - Figures showing the phenotype and residual distributions
   - Tables of feature importance for all bins from the top 10 pipelines
+
+## Pipeline Scores
+
+This folder contains two files for each phenotype (one with the original data and one after permuting the phenotype).  Each file has 100 rows where each row contains information on the structure and score of the optimized pipeline from that run of TPOT.  This is used to generate the pipeline structure diagram (figure 3).
