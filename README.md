@@ -33,11 +33,17 @@ A command line script that does the following:
   1) Load the rare variant data
   2) Load the residuals from regression with covariates
   3) Optimize and save TPOT pipeline based on the 'FeatureSetSelector-Transformer-Regressor' template
-  4) Score the optimized pipeline and save the results
+  4) Score the optimized pipeline and save the results (this was repeated later as well)
 
 ### run_tpot_exome_residuals_permuted.py
 
 The same as above, with an additional line that permutes the phenotype data before running the analysis
+
+### score_pipelines.py
+
+  1) Load and score the optimized pipelines (100 replicate and 100 permuted)
+  2) Save pipeline information (structure, selected feature set) and scores
+  3) Generate feature importances 100 times for the top ten (non-permuted) pipelines and save the results
 
 ### reformat_feature_importance.py
 
