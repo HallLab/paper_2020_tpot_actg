@@ -143,6 +143,7 @@ def plot_pipeline_diagrams(phenotype):
         graph.add_edge(pydot.Edge(regressor, score, color=color, label=str(idx+1), penwidth=penwidth, constraint="false", fontsize=TEXT_FONTSIZE))
 
     graph.write_png(f"plots/{phenotype}_pipeline_diagram.png")
+    graph.write_svg(f"plots/{phenotype}_pipeline_diagram.svg")
 
 if __name__ == '__main__':
     plot_pipeline_diagrams()
