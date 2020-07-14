@@ -10,7 +10,7 @@ feat_imps <- read_csv('supplementary_data/all_feature_imps.csv')
 ttest_res <- read_csv('supplementary_data/ttest-res.csv')
 
 r2_plot <- pipe_scores %>%
-  ggplot(aes(x = dat, y = `R^2 Score`, color = dat)) +
+  ggplot(aes(x = dat, y = `R^2 Score`, color = fct_rev(dat))) +
   geom_boxplot(fill = NA, color = 'grey70', outlier.size = 0) +
   ggbeeswarm::geom_beeswarm(size = 2.5, alpha = 0.8, stroke = 0) +
   scale_color_manual(values = c('grey40', '#D46680')) +
@@ -24,7 +24,7 @@ ggsave('figs/r2.pdf', r2_plot, width = 7, height = 4)
 
 
 mse_plot <- pipe_scores %>% 
-  ggplot(aes(x = dat, y = `MSE Score`, color = dat)) +
+  ggplot(aes(x = dat, y = `MSE Score`, color = fct_rev(dat))) +
   geom_boxplot(fill = NA, color = 'grey70', outlier.size = 0) +
   ggbeeswarm::geom_beeswarm(size = 2.5, alpha = 0.8, stroke = 0) +
   scale_color_manual(values = c('grey40', '#D46680')) +
