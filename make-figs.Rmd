@@ -23,7 +23,7 @@ importance_df <- feat_imps %>%
   # mutate(across(contains('Importance'), my_norm)) %>%
   ungroup() %>% 
   mutate(med_imp = miscTools::rowMedians(select(., contains('Importance'))),
-         jit_med_imp = jitter(med_imp, amount = 0.1))
+         jit_med_imp = jitter(med_imp, amount = 0.1)) %>% 
   # mutate(avg_rank = miscTools::rowMedians(select(., contains('Importance'))),
   #        jit_avg_rank = jitter(avg_rank, amount = 0.1)) %>%
   {.}
@@ -44,25 +44,25 @@ heat_upset <- function(typei, typei_short, thres, leg_breaks){
   plot_bili <- importance_df %>% 
     filter(type == typei, med_imp > thres)
   
-  met_gene <- feat_imps %>% 
+  met_gene <- feat_imps %>%
     mutate(Pipeline = as.factor(`Pipeline Score Rank`),
            med_imp = miscTools::rowMedians(select(., contains('Importance'))),
-           jit_med_imp = jitter(med_imp, amount = 0.1)) %>% 
-    group_by(bin, type) %>% 
-    summarise(avg_imp = mean(med_imp), .groups = 'drop') %>% 
+           jit_med_imp = jitter(med_imp, amount = 0.1)) %>%
+    group_by(bin, type) %>%
+    summarise(avg_imp = mean(med_imp), .groups = 'drop') %>%
     filter(type == typei, bin %in% plot_bili$bin) %>%
     arrange(avg_imp)
-  
-  met_plot <- met_gene %>% 
-    ggplot(aes(x = avg_imp, y = fct_reorder(bin, avg_imp))) +
-    geom_col(width = 0.2) +
-    scale_y_discrete(position = 'right', expand = expansion(add = c(0.5, 0.5))) +
-    scale_x_reverse(limit = c(NA, 0), expand = expansion(add = c(0.02, 0))) +
-    theme(axis.text.y = element_blank(),
-          axis.text.x = element_text(hjust = 0.4),
-          panel.grid = element_blank(),
-          plot.margin = margin(30.5, 0, 5.5, 5.5)) +
-    labs(y = NULL, x = 'Average important score')
+  # 
+  # met_plot <- met_gene %>% 
+  #   ggplot(aes(x = avg_imp, y = fct_reorder(bin, avg_imp))) +
+  #   geom_col(width = 0.2) +
+  #   scale_y_discrete(position = 'right', expand = expansion(add = c(0.5, 0.5))) +
+  #   scale_x_reverse(limit = c(NA, 0), expand = expansion(add = c(0.02, 0))) +
+  #   theme(axis.text.y = element_blank(),
+  #         axis.text.x = element_text(hjust = 0.4),
+  #         panel.grid = element_blank(),
+  #         plot.margin = margin(30.5, 0, 5.5, 5.5)) +
+  #   labs(y = NULL, x = 'Average important score')
   
   heatmap_bili <- plot_bili %>% 
     ggplot(aes(y = fct_relevel(bin, met_gene$bin),
@@ -72,18 +72,20 @@ heat_upset <- function(typei, typei_short, thres, leg_breaks){
     geom_line(aes(group = Pipeline)) +
     scale_x_discrete(expand = c(0,0)) +
     scale_y_discrete(expand = c(0,0)) +
-    labs(y = NULL, x = 'Pipeline', fill = 'Pipeline\nimportance') +
+    labs(y = NULL, x = 'Pipeline', title = typei, fill = 'Pipeline\nimportance') +
+    theme_bw() +
     theme(
-      # legend.position = 'top',
-          legend.key.height = unit(3.5, 'mm'),
-          legend.title = element_text(size = 8),
-          panel.grid = element_blank(),
-          axis.text.y = element_text(hjust = 0.5, size = 11),
-          plot.margin = margin(30.5, 5.5, 5.5, 2.5)) +
+      legend.key.height = unit(3.5, 'mm'),
+      legend.title = element_text(size = 8),
+      panel.grid = element_blank(),
+      axis.text.y = element_text(hjust = 0.5, size = 11),
+      plot.margin = margin(5.5, 5.5, 5.5, 2.5)
+    ) +
     scale_fill_viridis_c(option = 'D', alpha = 0.8, breaks = leg_breaks) +
     NULL
   
-  cowplot::plot_grid(met_plot, heatmap_bili, axis = 'tb', rel_widths = c(0.5, 1)) 
+  # cowplot::plot_grid(met_plot, heatmap_bili, axis = 'tb', rel_widths = c(0.5, 1)) 
+  heatmap_bili
 }
 ```
 
@@ -105,13 +107,10 @@ p3 <- heat_upset(typei = 'Change in plasma HIV RNA',
            leg_breaks = seq(0.25, 1, 0.25))
 
 p <- cowplot::plot_grid(p1, p2, p3, ncol = 1,
-                   labels = c('Change in Absolute CD4 Count',
-                              'Baseline bilirubin levels',
-                              'Change in plasma HIV RNA'),
                    label_x = 0.02,
                    hjust = 0)
 
-ggsave(paste0('figs/feat_imp.png'), p, width = 7, height = 9)
-ggsave(paste0('figs/feat_imp.pdf'), p, width = 7, height = 9)
+ggsave(paste0('figs/feat_imp.png'), p, width = 5, height = 9)
+ggsave(paste0('figs/feat_imp.pdf'), p, width = 5, height = 9)
 ```
 
