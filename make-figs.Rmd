@@ -18,61 +18,41 @@ feat_imps <- read_csv('supplementary_data/all_feature_imps.csv')
 importance_df <- feat_imps %>% 
   mutate(Pipeline = as.factor(`Pipeline Score Rank`)) %>% 
   # add_count(type, bin) %>%
-  group_by(type, Pipeline) %>% 
+  # group_by(type, Pipeline) %>% 
   # mutate_at(vars(matches('Importance')), ~ dense_rank(desc(.x))) %>%
   # mutate(across(contains('Importance'), my_norm)) %>%
-  ungroup() %>% 
+  # ungroup() %>% 
   mutate(med_imp = miscTools::rowMedians(select(., contains('Importance'))),
          jit_med_imp = jitter(med_imp, amount = 0.1)) %>% 
-  # mutate(avg_rank = miscTools::rowMedians(select(., contains('Importance'))),
-  #        jit_avg_rank = jitter(avg_rank, amount = 0.1)) %>%
   {.}
 
-met_gene <- 
-  # feat_imps %>% 
-  importance_df %>% 
-  # mutate(Pipeline = as.factor(`Pipeline Score Rank`),
-  #        med_imp = miscTools::rowMedians(select(., contains('Importance'))),
-  #        jit_med_imp = jitter(med_imp, amount = 0.1)) %>% 
-  group_by(bin, type) %>% 
-  summarise(avg_imp = mean(med_imp), .groups = 'drop')
-
+met_gene <- feat_imps %>%
+  mutate(Pipeline = as.factor(`Pipeline Score Rank`),
+         med_imp = miscTools::rowMedians(select(., contains('Importance'))),
+         jit_med_imp = jitter(med_imp, amount = 0.1)) %>%
+  group_by(type, bin) %>%
+  summarise(avg_imp = mean(med_imp), .groups = 'drop_last') %>%
+  slice_max(n = 16, order_by = avg_imp, with_ties = FALSE)
+  
 ```
 
 ```{r}
-heat_upset <- function(typei, typei_short, thres, leg_breaks){
-  plot_bili <- importance_df %>% 
-    filter(type == typei, med_imp > thres)
+heat_upset <- function(typei, typei_short, leg_breaks){
+  top_genes <- met_gene %>% 
+    filter(type == typei) %>% 
+    pull(bin) %>% 
+    as.character()
   
-  met_gene <- feat_imps %>%
-    mutate(Pipeline = as.factor(`Pipeline Score Rank`),
-           med_imp = miscTools::rowMedians(select(., contains('Importance'))),
-           jit_med_imp = jitter(med_imp, amount = 0.1)) %>%
-    group_by(bin, type) %>%
-    summarise(avg_imp = mean(med_imp), .groups = 'drop') %>%
-    filter(type == typei, bin %in% plot_bili$bin) %>%
-    arrange(avg_imp)
-  # 
-  # met_plot <- met_gene %>% 
-  #   ggplot(aes(x = avg_imp, y = fct_reorder(bin, avg_imp))) +
-  #   geom_col(width = 0.2) +
-  #   scale_y_discrete(position = 'right', expand = expansion(add = c(0.5, 0.5))) +
-  #   scale_x_reverse(limit = c(NA, 0), expand = expansion(add = c(0.02, 0))) +
-  #   theme(axis.text.y = element_blank(),
-  #         axis.text.x = element_text(hjust = 0.4),
-  #         panel.grid = element_blank(),
-  #         plot.margin = margin(30.5, 0, 5.5, 5.5)) +
-  #   labs(y = NULL, x = 'Average important score')
-  
-  heatmap_bili <- plot_bili %>% 
-    ggplot(aes(y = fct_relevel(bin, met_gene$bin),
+  heatmap_bili <- importance_df %>% 
+    filter(type == typei, bin %in% top_genes) %>% 
+    ggplot(aes(y = fct_relevel(bin, rev(top_genes)),
                fill = med_imp, x = Pipeline)) +
     geom_tile(alpha = 0.8) +
     geom_point() +
     geom_line(aes(group = Pipeline)) +
     scale_x_discrete(expand = c(0,0)) +
     scale_y_discrete(expand = c(0,0)) +
-    labs(y = NULL, x = 'Pipeline', title = typei, fill = 'Pipeline\nimportance') +
+    labs(y = NULL, x = 'Pipeline', title = typei, fill = 'Feature\nimportance') +
     theme_bw() +
     theme(
       legend.key.height = unit(3.5, 'mm'),
@@ -93,17 +73,14 @@ heat_upset <- function(typei, typei_short, thres, leg_breaks){
 ```{r}
 p1 <- heat_upset(typei = 'Change in Absolute CD4 Count',
            typei_short = 'cd4',
-           thres = 0.145,
            leg_breaks = c(0.2, 0.35, 0.5))
-
+ 
 p2 <- heat_upset(typei = 'Baseline bilirubin levels',
            typei_short = 'bili',
-           thres = 0.03,
            leg_breaks = c(0.05, 0.15, 0.25))
 
 p3 <- heat_upset(typei = 'Change in plasma HIV RNA',
            typei_short = 'hiv',
-           thres = 0.15,
            leg_breaks = seq(0.25, 1, 0.25))
 
 p <- cowplot::plot_grid(p1, p2, p3, ncol = 1,
