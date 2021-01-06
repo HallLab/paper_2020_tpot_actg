@@ -1,0 +1,762 @@
+Job started on comp-sc-0169.acib.production.int.aci.ics.psu.edu at Sun Dec 13 12:50:32 EST 2020
+Loaded 250 residuals
+Loaded 187 samples, each with 29,659 bins
+179 samples in the data
+Loaded genotype data
+Running TPOT
+	Phenotype = p_cd4difw48w4
+	Population = 100
+	Permute = True
+	FSS settings:
+		file = ../02/c7.all.v7.0.symbols.csv (contains 4,873 sets)
+		1 set(s) chosen at a time (4,873 combinations)
+==============================
+Starting Training...
+Loaded 250 residuals
+Loaded 187 samples, each with 29,659 bins
+179 samples in the data
+Loaded genotype data
+Running TPOT
+	Phenotype = p_cd4difw48w4
+	Population = 100
+	Permute = True
+	FSS settings:
+		file = ../02/c7.all.v7.0.symbols.csv (contains 4,873 sets)
+		1 set(s) chosen at a time (4,873 combinations)
+==============================
+Starting Training...
+Loaded 250 residuals
+Loaded 187 samples, each with 29,659 bins
+179 samples in the data
+Loaded genotype data
+Running TPOT
+	Phenotype = vllogdifw48w4
+	Population = 100
+	Permute = True
+	FSS settings:
+		file = ../02/c7.all.v7.0.symbols.csv (contains 4,873 sets)
+		1 set(s) chosen at a time (4,873 combinations)
+==============================
+Starting Training...
+Loaded 250 residuals
+Loaded 187 samples, each with 29,659 bins
+179 samples in the data
+Loaded genotype data
+Running TPOT
+	Phenotype = vllogdifw48w4
+	Population = 100
+	Permute = True
+	FSS settings:
+		file = ../02/c7.all.v7.0.symbols.csv (contains 4,873 sets)
+		1 set(s) chosen at a time (4,873 combinations)
+==============================
+Starting Training...
+Loaded 250 residuals
+Loaded 187 samples, each with 29,659 bins
+179 samples in the data
+Loaded genotype data
+Running TPOT
+	Phenotype = p_cd4difw48w4
+	Population = 100
+	Permute = True
+	FSS settings:
+		file = ../02/c7.all.v7.0.symbols.csv (contains 4,873 sets)
+		1 set(s) chosen at a time (4,873 combinations)
+==============================
+Starting Training...
+Loaded 250 residuals
+Loaded 187 samples, each with 29,659 bins
+179 samples in the data
+Loaded genotype data
+Running TPOT
+	Phenotype = vllogdifw48w4
+	Population = 100
+	Permute = True
+	FSS settings:
+		file = ../02/c7.all.v7.0.symbols.csv (contains 4,873 sets)
+		1 set(s) chosen at a time (4,873 combinations)
+==============================
+Starting Training...
+
+Best pipeline: LinearSVR(AddIntercept(Binarizer(FeatureSetSelector(input_matrix, sel_subset=2440, subset_list=../02/c7.all.v7.0.symbols.csv), threshold=0.35000000000000003)), C=5.0, dual=True, epsilon=1.0, loss=epsilon_insensitive, tol=0.1)
+5-fold Cross-Validation Scores
+	R^2 = 0.030036173134032684 Average (0.03325573470898535, -0.11409504108032964, 0.0498369088737598, 0.13913667808428676, 0.04204658508346115)
+Saved exome_p_cd4difw48w4_results plot
+Finished running TPOT for p_cd4difw48w4 Rep 62 at Sun Dec 13 16:03:32 EST 2020
+Loaded 250 residuals
+Loaded 187 samples, each with 29,659 bins
+179 samples in the data
+Loaded genotype data
+Running TPOT
+	Phenotype = p_cd4difw48w4
+	Population = 100
+	Permute = True
+	FSS settings:
+		file = ../02/c7.all.v7.0.symbols.csv (contains 4,873 sets)
+		1 set(s) chosen at a time (4,873 combinations)
+==============================
+Starting Training...
+
+Best pipeline: DecisionTreeRegressor(AddIntercept(Normalizer(FeatureSetSelector(input_matrix, sel_subset=223, subset_list=../02/c7.all.v7.0.symbols.csv), norm=l1)), max_depth=2, min_samples_leaf=15, min_samples_split=5)
+5-fold Cross-Validation Scores
+	R^2 = 0.21503158326160338 Average (0.14635954376882543, 0.21462979545733296, 0.261217952779073, 0.18050212748520478, 0.27244849681758077)
+Saved exome_vllogdifw48w4_results plot
+Finished running TPOT for vllogdifw48w4 Rep 61 at Sun Dec 13 16:13:16 EST 2020
+Loaded 250 residuals
+Loaded 187 samples, each with 29,659 bins
+179 samples in the data
+Loaded genotype data
+Running TPOT
+	Phenotype = vllogdifw48w4
+	Population = 100
+	Permute = True
+	FSS settings:
+		file = ../02/c7.all.v7.0.symbols.csv (contains 4,873 sets)
+		1 set(s) chosen at a time (4,873 combinations)
+==============================
+Starting Training...
+
+Best pipeline: LinearSVR(AddIntercept(StandardScaler(FeatureSetSelector(input_matrix, sel_subset=1709, subset_list=../02/c7.all.v7.0.symbols.csv))), C=0.5, dual=True, epsilon=0.1, loss=epsilon_insensitive, tol=0.1)
+5-fold Cross-Validation Scores
+	R^2 = 0.028726019608060205 Average (0.23145688876412074, -0.0741610963245336, -0.19316358779205056, 0.08099984715968356, 0.0984980462330809)
+Saved exome_p_cd4difw48w4_results plot
+Finished running TPOT for p_cd4difw48w4 Rep 61 at Sun Dec 13 16:20:10 EST 2020
+Loaded 250 residuals
+Loaded 187 samples, each with 29,659 bins
+179 samples in the data
+Loaded genotype data
+Running TPOT
+	Phenotype = p_cd4difw48w4
+	Population = 100
+	Permute = True
+	FSS settings:
+		file = ../02/c7.all.v7.0.symbols.csv (contains 4,873 sets)
+		1 set(s) chosen at a time (4,873 combinations)
+==============================
+Starting Training...
+
+Best pipeline: LinearSVR(AddIntercept(RobustScaler(FeatureSetSelector(input_matrix, sel_subset=2608, subset_list=../02/c7.all.v7.0.symbols.csv))), C=0.001, dual=False, epsilon=0.0001, loss=squared_epsilon_insensitive, tol=0.1)
+5-fold Cross-Validation Scores
+	R^2 = 0.11040011286059385 Average (0.13196336709376855, -0.027051176795371612, 0.15779411265214816, 0.16611394426021142, 0.12318031709221278)
+Saved exome_vllogdifw48w4_results plot
+Finished running TPOT for vllogdifw48w4 Rep 62 at Sun Dec 13 16:30:53 EST 2020
+Loaded 250 residuals
+Loaded 187 samples, each with 29,659 bins
+179 samples in the data
+Loaded genotype data
+Running TPOT
+	Phenotype = vllogdifw48w4
+	Population = 100
+	Permute = True
+	FSS settings:
+		file = ../02/c7.all.v7.0.symbols.csv (contains 4,873 sets)
+		1 set(s) chosen at a time (4,873 combinations)
+==============================
+Starting Training...
+
+Best pipeline: ElasticNetCV(AddIntercept(Binarizer(FeatureSetSelector(input_matrix, sel_subset=82, subset_list=../02/c7.all.v7.0.symbols.csv), threshold=0.30000000000000004)), l1_ratio=0.25, tol=1e-05)
+5-fold Cross-Validation Scores
+	R^2 = 0.1438223914558157 Average (0.022692162471234623, 0.277706861047325, 0.12429115440959715, 0.13790868252621558, 0.15651309682470627)
+Saved exome_vllogdifw48w4_results plot
+Finished running TPOT for vllogdifw48w4 Rep 63 at Sun Dec 13 17:41:23 EST 2020
+Loaded 250 residuals
+Loaded 187 samples, each with 29,659 bins
+179 samples in the data
+Loaded genotype data
+Running TPOT
+	Phenotype = p_cd4difw48w4
+	Population = 100
+	Permute = True
+	FSS settings:
+		file = ../02/c7.all.v7.0.symbols.csv (contains 4,873 sets)
+		1 set(s) chosen at a time (4,873 combinations)
+==============================
+Starting Training...
+
+Best pipeline: ElasticNetCV(AddIntercept(AddIntercept(FeatureSetSelector(input_matrix, sel_subset=721, subset_list=../02/c7.all.v7.0.symbols.csv))), l1_ratio=0.9, tol=0.001)
+5-fold Cross-Validation Scores
+	R^2 = 0.08586792766169356 Average (-0.009097815853176261, 0.04004643049479317, 0.1154396038445914, 0.11496511189006964, 0.16798630793218983)
+Saved exome_p_cd4difw48w4_results plot
+Finished running TPOT for p_cd4difw48w4 Rep 63 at Sun Dec 13 18:09:27 EST 2020
+Loaded 250 residuals
+Loaded 187 samples, each with 29,659 bins
+179 samples in the data
+Loaded genotype data
+Running TPOT
+	Phenotype = vllogdifw48w4
+	Population = 100
+	Permute = True
+	FSS settings:
+		file = ../02/c7.all.v7.0.symbols.csv (contains 4,873 sets)
+		1 set(s) chosen at a time (4,873 combinations)
+==============================
+Starting Training...
+
+Best pipeline: DecisionTreeRegressor(AddIntercept(Binarizer(FeatureSetSelector(input_matrix, sel_subset=1788, subset_list=../02/c7.all.v7.0.symbols.csv), threshold=0.30000000000000004)), max_depth=1, min_samples_leaf=19, min_samples_split=18)
+5-fold Cross-Validation Scores
+	R^2 = 0.04653543592656382 Average (0.05157123596357349, -0.0465546095776781, 0.03082551866383454, 0.14846726658106468, 0.04836776800202447)
+Saved exome_p_cd4difw48w4_results plot
+Finished running TPOT for p_cd4difw48w4 Rep 65 at Sun Dec 13 19:28:39 EST 2020
+Loaded 250 residuals
+Loaded 187 samples, each with 29,659 bins
+179 samples in the data
+Loaded genotype data
+Running TPOT
+	Phenotype = p_cd4difw48w4
+	Population = 100
+	Permute = True
+	FSS settings:
+		file = ../02/c7.all.v7.0.symbols.csv (contains 4,873 sets)
+		1 set(s) chosen at a time (4,873 combinations)
+==============================
+Starting Training...
+
+Best pipeline: DecisionTreeRegressor(AddIntercept(MinMaxScaler(FeatureSetSelector(input_matrix, sel_subset=3182, subset_list=../02/c7.all.v7.0.symbols.csv))), max_depth=2, min_samples_leaf=7, min_samples_split=18)
+5-fold Cross-Validation Scores
+	R^2 = 0.19186950609955933 Average (0.28995518911421236, 0.27654003423455087, 0.23359900894970476, -0.04318878459049502, 0.20244208278982367)
+Saved exome_vllogdifw48w4_results plot
+Finished running TPOT for vllogdifw48w4 Rep 65 at Sun Dec 13 20:20:14 EST 2020
+Loaded 250 residuals
+Loaded 187 samples, each with 29,659 bins
+179 samples in the data
+Loaded genotype data
+Running TPOT
+	Phenotype = vllogdifw48w4
+	Population = 100
+	Permute = True
+	FSS settings:
+		file = ../02/c7.all.v7.0.symbols.csv (contains 4,873 sets)
+		1 set(s) chosen at a time (4,873 combinations)
+==============================
+Starting Training...
+
+Best pipeline: LinearSVR(AddIntercept(StandardScaler(FeatureSetSelector(input_matrix, sel_subset=1564, subset_list=../02/c7.all.v7.0.symbols.csv))), C=0.001, dual=True, epsilon=0.0001, loss=squared_epsilon_insensitive, tol=0.001)
+5-fold Cross-Validation Scores
+	R^2 = 0.048277603472169986 Average (0.08388759381864963, 0.09944581898416105, -0.05109673949369653, 0.11518615799419774, -0.0060348139424619696)
+Saved exome_vllogdifw48w4_results plot
+Finished running TPOT for vllogdifw48w4 Rep 64 at Sun Dec 13 20:48:35 EST 2020
+Loaded 250 residuals
+Loaded 187 samples, each with 29,659 bins
+179 samples in the data
+Loaded genotype data
+Running TPOT
+	Phenotype = p_cd4difw48w4
+	Population = 100
+	Permute = True
+	FSS settings:
+		file = ../02/c7.all.v7.0.symbols.csv (contains 4,873 sets)
+		1 set(s) chosen at a time (4,873 combinations)
+==============================
+Starting Training...
+
+Best pipeline: LinearSVR(AddIntercept(RBFSampler(FeatureSetSelector(input_matrix, sel_subset=2853, subset_list=../02/c7.all.v7.0.symbols.csv), gamma=0.45)), C=1.0, dual=True, epsilon=1.0, loss=squared_epsilon_insensitive, tol=0.1)
+5-fold Cross-Validation Scores
+	R^2 = 0.13014399795047754 Average (0.10340686389768339, 0.040504645142786955, 0.09215836210136785, 0.17357880590735297, 0.24107131270319648)
+Saved exome_p_cd4difw48w4_results plot
+Finished running TPOT for p_cd4difw48w4 Rep 66 at Sun Dec 13 21:20:29 EST 2020
+Loaded 250 residuals
+Loaded 187 samples, each with 29,659 bins
+179 samples in the data
+Loaded genotype data
+Running TPOT
+	Phenotype = vllogdifw48w4
+	Population = 100
+	Permute = True
+	FSS settings:
+		file = ../02/c7.all.v7.0.symbols.csv (contains 4,873 sets)
+		1 set(s) chosen at a time (4,873 combinations)
+==============================
+Starting Training...
+
+Best pipeline: ElasticNetCV(AddIntercept(AddIntercept(FeatureSetSelector(input_matrix, sel_subset=1516, subset_list=../02/c7.all.v7.0.symbols.csv))), l1_ratio=1.0, tol=0.01)
+5-fold Cross-Validation Scores
+	R^2 = 0.062090083338552995 Average (0.0821536660689175, 0.12186507827473847, -0.015109973686975309, -0.045714444906971075, 0.16725609094305538)
+Saved exome_p_cd4difw48w4_results plot
+Finished running TPOT for p_cd4difw48w4 Rep 64 at Sun Dec 13 22:07:05 EST 2020
+Loaded 250 residuals
+Loaded 187 samples, each with 29,659 bins
+179 samples in the data
+Loaded genotype data
+Running TPOT
+	Phenotype = p_cd4difw48w4
+	Population = 100
+	Permute = True
+	FSS settings:
+		file = ../02/c7.all.v7.0.symbols.csv (contains 4,873 sets)
+		1 set(s) chosen at a time (4,873 combinations)
+==============================
+Starting Training...
+
+Best pipeline: DecisionTreeRegressor(AddIntercept(MinMaxScaler(FeatureSetSelector(input_matrix, sel_subset=3393, subset_list=../02/c7.all.v7.0.symbols.csv))), max_depth=1, min_samples_leaf=5, min_samples_split=15)
+5-fold Cross-Validation Scores
+	R^2 = 0.17734800694792902 Average (0.2766254310878268, 0.1862682451977542, 0.13874191268248448, -0.028099410370328037, 0.3132038561419077)
+Saved exome_vllogdifw48w4_results plot
+Finished running TPOT for vllogdifw48w4 Rep 66 at Sun Dec 13 22:14:46 EST 2020
+Loaded 250 residuals
+Loaded 187 samples, each with 29,659 bins
+179 samples in the data
+Loaded genotype data
+Running TPOT
+	Phenotype = vllogdifw48w4
+	Population = 100
+	Permute = True
+	FSS settings:
+		file = ../02/c7.all.v7.0.symbols.csv (contains 4,873 sets)
+		1 set(s) chosen at a time (4,873 combinations)
+==============================
+Starting Training...
+
+Best pipeline: DecisionTreeRegressor(AddIntercept(AddIntercept(FeatureSetSelector(input_matrix, sel_subset=3188, subset_list=../02/c7.all.v7.0.symbols.csv))), max_depth=2, min_samples_leaf=1, min_samples_split=12)
+5-fold Cross-Validation Scores
+	R^2 = 0.15944748824961807 Average (0.022632031649884476, -0.028725567030055243, 0.36234870388168017, 0.21471818740996984, 0.22626408533661113)
+Saved exome_p_cd4difw48w4_results plot
+Finished running TPOT for p_cd4difw48w4 Rep 67 at Sun Dec 13 22:42:33 EST 2020
+Loaded 250 residuals
+Loaded 187 samples, each with 29,659 bins
+179 samples in the data
+Loaded genotype data
+Running TPOT
+	Phenotype = p_cd4difw48w4
+	Population = 100
+	Permute = True
+	FSS settings:
+		file = ../02/c7.all.v7.0.symbols.csv (contains 4,873 sets)
+		1 set(s) chosen at a time (4,873 combinations)
+==============================
+Starting Training...
+
+Best pipeline: DecisionTreeRegressor(AddIntercept(StandardScaler(FeatureSetSelector(input_matrix, sel_subset=1446, subset_list=../02/c7.all.v7.0.symbols.csv))), max_depth=1, min_samples_leaf=3, min_samples_split=17)
+5-fold Cross-Validation Scores
+	R^2 = 0.09661348146488899 Average (0.11590176251641149, 0.25393786133112073, 0.19867426087989093, 0.02578583109529986, -0.11123230849827803)
+Saved exome_p_cd4difw48w4_results plot
+Finished running TPOT for p_cd4difw48w4 Rep 68 at Mon Dec 14 00:03:29 EST 2020
+Loaded 250 residuals
+Loaded 187 samples, each with 29,659 bins
+179 samples in the data
+Loaded genotype data
+Running TPOT
+	Phenotype = vllogdifw48w4
+	Population = 100
+	Permute = True
+	FSS settings:
+		file = ../02/c7.all.v7.0.symbols.csv (contains 4,873 sets)
+		1 set(s) chosen at a time (4,873 combinations)
+==============================
+Starting Training...
+
+Best pipeline: ElasticNetCV(AddIntercept(RBFSampler(FeatureSetSelector(input_matrix, sel_subset=4378, subset_list=../02/c7.all.v7.0.symbols.csv), gamma=1.0)), l1_ratio=0.9, tol=0.1)
+5-fold Cross-Validation Scores
+	R^2 = 0.07145386377768001 Average (0.017699511501331755, 0.18118454259793282, 0.0670487377644895, -0.06270813770200179, 0.1540446647266478)
+Saved exome_vllogdifw48w4_results plot
+Finished running TPOT for vllogdifw48w4 Rep 67 at Mon Dec 14 00:56:03 EST 2020
+Loaded 250 residuals
+Loaded 187 samples, each with 29,659 bins
+179 samples in the data
+Loaded genotype data
+Running TPOT
+	Phenotype = p_cd4difw48w4
+	Population = 100
+	Permute = True
+	FSS settings:
+		file = ../02/c7.all.v7.0.symbols.csv (contains 4,873 sets)
+		1 set(s) chosen at a time (4,873 combinations)
+==============================
+Starting Training...
+
+Best pipeline: LinearSVR(AddIntercept(Binarizer(FeatureSetSelector(input_matrix, sel_subset=625, subset_list=../02/c7.all.v7.0.symbols.csv), threshold=0.5)), C=0.01, dual=True, epsilon=0.0001, loss=squared_epsilon_insensitive, tol=0.1)
+5-fold Cross-Validation Scores
+	R^2 = 0.10198826853729874 Average (0.1187677032843566, 0.05995471884024606, -0.0098116882989292, 0.14184135006527465, 0.1991892587955456)
+Saved exome_p_cd4difw48w4_results plot
+Finished running TPOT for p_cd4difw48w4 Rep 69 at Mon Dec 14 02:07:32 EST 2020
+Loaded 250 residuals
+Loaded 187 samples, each with 29,659 bins
+179 samples in the data
+Loaded genotype data
+Running TPOT
+	Phenotype = vllogdifw48w4
+	Population = 100
+	Permute = True
+	FSS settings:
+		file = ../02/c7.all.v7.0.symbols.csv (contains 4,873 sets)
+		1 set(s) chosen at a time (4,873 combinations)
+==============================
+Starting Training...
+
+Best pipeline: DecisionTreeRegressor(AddIntercept(AddIntercept(FeatureSetSelector(input_matrix, sel_subset=2276, subset_list=../02/c7.all.v7.0.symbols.csv))), max_depth=2, min_samples_leaf=2, min_samples_split=7)
+5-fold Cross-Validation Scores
+	R^2 = 0.14463183438370458 Average (0.03425498889159884, 0.35559582744849494, 0.20947060083100855, -0.0065923678236079475, 0.1304301225710286)
+Saved exome_p_cd4difw48w4_results plot
+Finished running TPOT for p_cd4difw48w4 Rep 70 at Mon Dec 14 02:10:25 EST 2020
+Loaded 250 residuals
+Loaded 187 samples, each with 29,659 bins
+179 samples in the data
+Loaded genotype data
+Running TPOT
+	Phenotype = p_cd4difw48w4
+	Population = 100
+	Permute = True
+	FSS settings:
+		file = ../02/c7.all.v7.0.symbols.csv (contains 4,873 sets)
+		1 set(s) chosen at a time (4,873 combinations)
+==============================
+Starting Training...
+
+Best pipeline: LinearSVR(AddIntercept(RobustScaler(FeatureSetSelector(input_matrix, sel_subset=3435, subset_list=../02/c7.all.v7.0.symbols.csv))), C=0.001, dual=True, epsilon=0.1, loss=epsilon_insensitive, tol=1e-05)
+5-fold Cross-Validation Scores
+	R^2 = 0.036632357438060946 Average (0.07972807871031895, -0.040990328562539036, 0.17663323311458823, -0.003743592951450214, -0.028465603120613192)
+Saved exome_vllogdifw48w4_results plot
+Finished running TPOT for vllogdifw48w4 Rep 69 at Mon Dec 14 02:34:23 EST 2020
+Loaded 250 residuals
+Loaded 187 samples, each with 29,659 bins
+179 samples in the data
+Loaded genotype data
+Running TPOT
+	Phenotype = vllogdifw48w4
+	Population = 100
+	Permute = True
+	FSS settings:
+		file = ../02/c7.all.v7.0.symbols.csv (contains 4,873 sets)
+		1 set(s) chosen at a time (4,873 combinations)
+==============================
+Starting Training...
+
+Best pipeline: LassoLarsCV(AddIntercept(RobustScaler(FeatureSetSelector(input_matrix, sel_subset=4033, subset_list=../02/c7.all.v7.0.symbols.csv))), normalize=False)
+5-fold Cross-Validation Scores
+	R^2 = 0.13616915574631788 Average (0.0985445064406335, 0.2841866164801452, 0.060292853031937654, -0.11587259926442206, 0.35369440204329505)
+Saved exome_vllogdifw48w4_results plot
+Finished running TPOT for vllogdifw48w4 Rep 68 at Mon Dec 14 02:56:52 EST 2020
+Loaded 250 residuals
+Loaded 187 samples, each with 29,659 bins
+179 samples in the data
+Loaded genotype data
+Running TPOT
+	Phenotype = p_cd4difw48w4
+	Population = 100
+	Permute = True
+	FSS settings:
+		file = ../02/c7.all.v7.0.symbols.csv (contains 4,873 sets)
+		1 set(s) chosen at a time (4,873 combinations)
+==============================
+Starting Training...
+
+Best pipeline: LinearSVR(AddIntercept(RBFSampler(FeatureSetSelector(input_matrix, sel_subset=3681, subset_list=../02/c7.all.v7.0.symbols.csv), gamma=1.0)), C=0.5, dual=True, epsilon=0.1, loss=epsilon_insensitive, tol=0.0001)
+5-fold Cross-Validation Scores
+	R^2 = 0.11999228061068104 Average (-0.17039734668334705, 0.13466219831700033, 0.11652292337001413, 0.34854526929724094, 0.17062835875249682)
+Saved exome_vllogdifw48w4_results plot
+Finished running TPOT for vllogdifw48w4 Rep 70 at Mon Dec 14 03:35:16 EST 2020
+Loaded 250 residuals
+Loaded 187 samples, each with 29,659 bins
+179 samples in the data
+Loaded genotype data
+Running TPOT
+	Phenotype = vllogdifw48w4
+	Population = 100
+	Permute = True
+	FSS settings:
+		file = ../02/c7.all.v7.0.symbols.csv (contains 4,873 sets)
+		1 set(s) chosen at a time (4,873 combinations)
+==============================
+Starting Training...
+
+Best pipeline: LinearSVR(AddIntercept(RBFSampler(FeatureSetSelector(input_matrix, sel_subset=718, subset_list=../02/c7.all.v7.0.symbols.csv), gamma=0.9500000000000001)), C=0.5, dual=True, epsilon=0.0001, loss=squared_epsilon_insensitive, tol=0.01)
+5-fold Cross-Validation Scores
+	R^2 = 0.13188398352923633 Average (0.09621722996251758, 0.12406653498582332, 0.10659805369023445, 0.2474316418614687, 0.08510645714613763)
+Saved exome_p_cd4difw48w4_results plot
+Finished running TPOT for p_cd4difw48w4 Rep 71 at Mon Dec 14 04:19:44 EST 2020
+Loaded 250 residuals
+Loaded 187 samples, each with 29,659 bins
+179 samples in the data
+Loaded genotype data
+Running TPOT
+	Phenotype = p_cd4difw48w4
+	Population = 100
+	Permute = True
+	FSS settings:
+		file = ../02/c7.all.v7.0.symbols.csv (contains 4,873 sets)
+		1 set(s) chosen at a time (4,873 combinations)
+==============================
+Starting Training...
+
+Best pipeline: LinearSVR(AddIntercept(RobustScaler(FeatureSetSelector(input_matrix, sel_subset=3875, subset_list=../02/c7.all.v7.0.symbols.csv))), C=0.001, dual=True, epsilon=0.0001, loss=squared_epsilon_insensitive, tol=0.01)
+5-fold Cross-Validation Scores
+	R^2 = 0.02835924307935591 Average (0.048999702711807425, -0.06447922027219422, 0.05313329217423801, 0.11768690617642785, -0.013544465393499516)
+Saved exome_p_cd4difw48w4_results plot
+Finished running TPOT for p_cd4difw48w4 Rep 72 at Mon Dec 14 05:28:35 EST 2020
+Loaded 250 residuals
+Loaded 187 samples, each with 29,659 bins
+179 samples in the data
+Loaded genotype data
+Running TPOT
+	Phenotype = vllogdifw48w4
+	Population = 100
+	Permute = True
+	FSS settings:
+		file = ../02/c7.all.v7.0.symbols.csv (contains 4,873 sets)
+		1 set(s) chosen at a time (4,873 combinations)
+==============================
+Starting Training...
+
+Best pipeline: LinearSVR(AddIntercept(PCA(FeatureSetSelector(input_matrix, sel_subset=2774, subset_list=../02/c7.all.v7.0.symbols.csv), iterated_power=2, svd_solver=randomized)), C=0.001, dual=False, epsilon=0.0001, loss=squared_epsilon_insensitive, tol=0.1)
+5-fold Cross-Validation Scores
+	R^2 = 0.05920325104423716 Average (0.005792902407469658, 0.0507367762037777, 0.044943546651440514, 0.044019620543944815, 0.1505234094145531)
+Saved exome_vllogdifw48w4_results plot
+Finished running TPOT for vllogdifw48w4 Rep 72 at Mon Dec 14 06:09:24 EST 2020
+Loaded 250 residuals
+Loaded 187 samples, each with 29,659 bins
+179 samples in the data
+Loaded genotype data
+Running TPOT
+	Phenotype = p_cd4difw48w4
+	Population = 100
+	Permute = True
+	FSS settings:
+		file = ../02/c7.all.v7.0.symbols.csv (contains 4,873 sets)
+		1 set(s) chosen at a time (4,873 combinations)
+==============================
+Starting Training...
+
+Best pipeline: ElasticNetCV(AddIntercept(Nystroem(FeatureSetSelector(input_matrix, sel_subset=635, subset_list=../02/c7.all.v7.0.symbols.csv), gamma=0.05, kernel=poly, n_components=9)), l1_ratio=1.0, tol=0.001)
+5-fold Cross-Validation Scores
+	R^2 = 0.06438712005363816 Average (-0.024571270978701154, 0.08837746646833, 0.054269581505970055, 0.10488258676804174, 0.09897723650455015)
+Saved exome_p_cd4difw48w4_results plot
+Finished running TPOT for p_cd4difw48w4 Rep 73 at Mon Dec 14 06:50:21 EST 2020
+Loaded 250 residuals
+Loaded 187 samples, each with 29,659 bins
+179 samples in the data
+Loaded genotype data
+Running TPOT
+	Phenotype = vllogdifw48w4
+	Population = 100
+	Permute = True
+	FSS settings:
+		file = ../02/c7.all.v7.0.symbols.csv (contains 4,873 sets)
+		1 set(s) chosen at a time (4,873 combinations)
+==============================
+Starting Training...
+
+Best pipeline: LinearSVR(AddIntercept(PCA(FeatureSetSelector(input_matrix, sel_subset=3330, subset_list=../02/c7.all.v7.0.symbols.csv), iterated_power=2, svd_solver=randomized)), C=0.1, dual=True, epsilon=0.0001, loss=epsilon_insensitive, tol=0.01)
+5-fold Cross-Validation Scores
+	R^2 = -0.012727911713469476 Average (0.029157527402922323, -0.09901649537100354, -0.001039261502377098, -0.056762548812257174, 0.06402121971536812)
+Saved exome_p_cd4difw48w4_results plot
+Finished running TPOT for p_cd4difw48w4 Rep 74 at Mon Dec 14 07:41:56 EST 2020
+Loaded 250 residuals
+Loaded 187 samples, each with 29,659 bins
+179 samples in the data
+Loaded genotype data
+Running TPOT
+	Phenotype = p_cd4difw48w4
+	Population = 100
+	Permute = True
+	FSS settings:
+		file = ../02/c7.all.v7.0.symbols.csv (contains 4,873 sets)
+		1 set(s) chosen at a time (4,873 combinations)
+==============================
+Starting Training...
+
+Best pipeline: ElasticNetCV(AddIntercept(Binarizer(FeatureSetSelector(input_matrix, sel_subset=4861, subset_list=../02/c7.all.v7.0.symbols.csv), threshold=0.55)), l1_ratio=0.9500000000000001, tol=0.0001)
+5-fold Cross-Validation Scores
+	R^2 = 0.12097121095031367 Average (0.23078840150296942, -0.06833317445018694, 0.1473320486738786, 0.23079828540696212, 0.06427049361794512)
+Saved exome_vllogdifw48w4_results plot
+Finished running TPOT for vllogdifw48w4 Rep 71 at Mon Dec 14 09:01:50 EST 2020
+Loaded 250 residuals
+Loaded 187 samples, each with 29,659 bins
+179 samples in the data
+Loaded genotype data
+Running TPOT
+	Phenotype = vllogdifw48w4
+	Population = 100
+	Permute = True
+	FSS settings:
+		file = ../02/c7.all.v7.0.symbols.csv (contains 4,873 sets)
+		1 set(s) chosen at a time (4,873 combinations)
+==============================
+Starting Training...
+
+Best pipeline: LinearSVR(AddIntercept(PCA(FeatureSetSelector(input_matrix, sel_subset=3343, subset_list=../02/c7.all.v7.0.symbols.csv), iterated_power=1, svd_solver=randomized)), C=0.001, dual=True, epsilon=0.0001, loss=squared_epsilon_insensitive, tol=0.1)
+5-fold Cross-Validation Scores
+	R^2 = 0.004343476263012169 Average (0.15243323858254876, 0.07561039395328284, 0.0017382682796077686, -0.1714516280135605, -0.03661289148681801)
+Saved exome_p_cd4difw48w4_results plot
+Finished running TPOT for p_cd4difw48w4 Rep 75 at Mon Dec 14 09:31:16 EST 2020
+Loaded 250 residuals
+Loaded 187 samples, each with 29,659 bins
+179 samples in the data
+Loaded genotype data
+Running TPOT
+	Phenotype = p_cd4difw48w4
+	Population = 100
+	Permute = True
+	FSS settings:
+		file = ../02/c7.all.v7.0.symbols.csv (contains 4,873 sets)
+		1 set(s) chosen at a time (4,873 combinations)
+==============================
+Starting Training...
+
+Best pipeline: ElasticNetCV(AddIntercept(StandardScaler(FeatureSetSelector(input_matrix, sel_subset=1648, subset_list=../02/c7.all.v7.0.symbols.csv))), l1_ratio=0.4, tol=0.01)
+5-fold Cross-Validation Scores
+	R^2 = 0.09688073163006106 Average (0.13903744726727163, 0.044194753647829654, 0.16739258899574005, 0.12545529630041763, 0.008323571939046315)
+Saved exome_vllogdifw48w4_results plot
+Finished running TPOT for vllogdifw48w4 Rep 73 at Mon Dec 14 10:02:23 EST 2020
+Loaded 250 residuals
+Loaded 187 samples, each with 29,659 bins
+179 samples in the data
+Loaded genotype data
+Running TPOT
+	Phenotype = vllogdifw48w4
+	Population = 100
+	Permute = True
+	FSS settings:
+		file = ../02/c7.all.v7.0.symbols.csv (contains 4,873 sets)
+		1 set(s) chosen at a time (4,873 combinations)
+==============================
+Starting Training...
+
+Best pipeline: ElasticNetCV(AddIntercept(Binarizer(FeatureSetSelector(input_matrix, sel_subset=653, subset_list=../02/c7.all.v7.0.symbols.csv), threshold=1.0)), l1_ratio=0.1, tol=0.01)
+5-fold Cross-Validation Scores
+	R^2 = 0.08036381989752447 Average (0.0897076137617383, 0.0897395891915943, 0.0006796016683012773, 0.16206619776725495, 0.059626097098733566)
+Saved exome_vllogdifw48w4_results plot
+Finished running TPOT for vllogdifw48w4 Rep 74 at Mon Dec 14 10:06:20 EST 2020
+Loaded 250 residuals
+Loaded 187 samples, each with 29,659 bins
+179 samples in the data
+Loaded genotype data
+Running TPOT
+	Phenotype = p_cd4difw48w4
+	Population = 100
+	Permute = True
+	FSS settings:
+		file = ../02/c7.all.v7.0.symbols.csv (contains 4,873 sets)
+		1 set(s) chosen at a time (4,873 combinations)
+==============================
+Starting Training...
+
+Best pipeline: LinearSVR(AddIntercept(StandardScaler(FeatureSetSelector(input_matrix, sel_subset=1890, subset_list=../02/c7.all.v7.0.symbols.csv))), C=0.001, dual=False, epsilon=0.1, loss=squared_epsilon_insensitive, tol=0.1)
+5-fold Cross-Validation Scores
+	R^2 = 0.05233412593327676 Average (0.07818529518379025, 0.1674138671776143, -0.029168981158665286, 0.02671459714147173, 0.01852585132217277)
+Saved exome_vllogdifw48w4_results plot
+Finished running TPOT for vllogdifw48w4 Rep 75 at Mon Dec 14 11:14:58 EST 2020
+Loaded 250 residuals
+Loaded 187 samples, each with 29,659 bins
+179 samples in the data
+Loaded genotype data
+Running TPOT
+	Phenotype = vllogdifw48w4
+	Population = 100
+	Permute = True
+	FSS settings:
+		file = ../02/c7.all.v7.0.symbols.csv (contains 4,873 sets)
+		1 set(s) chosen at a time (4,873 combinations)
+==============================
+Starting Training...
+
+Best pipeline: RidgeCV(AddIntercept(MinMaxScaler(FeatureSetSelector(input_matrix, sel_subset=4139, subset_list=../02/c7.all.v7.0.symbols.csv))))
+5-fold Cross-Validation Scores
+	R^2 = 0.10782715747504541 Average (0.11396703015370757, 0.12991714761718975, 0.10117572491277238, 0.11264563703484498, 0.08143024765671236)
+Saved exome_p_cd4difw48w4_results plot
+Finished running TPOT for p_cd4difw48w4 Rep 76 at Mon Dec 14 11:27:03 EST 2020
+Loaded 250 residuals
+Loaded 187 samples, each with 29,659 bins
+179 samples in the data
+Loaded genotype data
+Running TPOT
+	Phenotype = p_cd4difw48w4
+	Population = 100
+	Permute = True
+	FSS settings:
+		file = ../02/c7.all.v7.0.symbols.csv (contains 4,873 sets)
+		1 set(s) chosen at a time (4,873 combinations)
+==============================
+Starting Training...
+
+Best pipeline: LinearSVR(AddIntercept(Binarizer(FeatureSetSelector(input_matrix, sel_subset=4705, subset_list=../02/c7.all.v7.0.symbols.csv), threshold=0.4)), C=0.01, dual=False, epsilon=0.1, loss=squared_epsilon_insensitive, tol=0.1)
+5-fold Cross-Validation Scores
+	R^2 = 0.12929686266583099 Average (0.20201609421152333, 0.17445234594099357, -0.008298172073954113, 0.16225943188605074, 0.11605461336454137)
+Saved exome_p_cd4difw48w4_results plot
+Finished running TPOT for p_cd4difw48w4 Rep 77 at Mon Dec 14 13:06:30 EST 2020
+Loaded 250 residuals
+Loaded 187 samples, each with 29,659 bins
+179 samples in the data
+Loaded genotype data
+Running TPOT
+	Phenotype = vllogdifw48w4
+	Population = 100
+	Permute = True
+	FSS settings:
+		file = ../02/c7.all.v7.0.symbols.csv (contains 4,873 sets)
+		1 set(s) chosen at a time (4,873 combinations)
+==============================
+Starting Training...
+
+Best pipeline: ElasticNetCV(AddIntercept(Binarizer(FeatureSetSelector(input_matrix, sel_subset=1694, subset_list=../02/c7.all.v7.0.symbols.csv), threshold=0.35000000000000003)), l1_ratio=0.1, tol=0.1)
+5-fold Cross-Validation Scores
+	R^2 = 0.129872692045967 Average (0.18672868270275034, 0.10426687574824589, 0.14550188070486836, -0.03244690627983515, 0.2453129273538055)
+Saved exome_vllogdifw48w4_results plot
+Finished running TPOT for vllogdifw48w4 Rep 76 at Mon Dec 14 13:24:32 EST 2020
+
+Best pipeline: LinearSVR(AddIntercept(Normalizer(FeatureSetSelector(input_matrix, sel_subset=4661, subset_list=../02/c7.all.v7.0.symbols.csv), norm=max)), C=0.1, dual=False, epsilon=1.0, loss=squared_epsilon_insensitive, tol=0.1)
+5-fold Cross-Validation Scores
+	R^2 = 0.0923356278361888 Average (0.11558382378492882, 0.12684378772206495, 0.0683481282275249, -0.12849656744596283, 0.2793989668923882)
+Saved exome_p_cd4difw48w4_results plot
+Finished running TPOT for p_cd4difw48w4 Rep 78 at Mon Dec 14 13:24:42 EST 2020
+Loaded 250 residuals
+Loaded 187 samples, each with 29,659 bins
+179 samples in the data
+Loaded genotype data
+Running TPOT
+	Phenotype = vllogdifw48w4
+	Population = 100
+	Permute = True
+	FSS settings:
+		file = ../02/c7.all.v7.0.symbols.csv (contains 4,873 sets)
+		1 set(s) chosen at a time (4,873 combinations)
+==============================
+Starting Training...
+Loaded 250 residuals
+Loaded 187 samples, each with 29,659 bins
+179 samples in the data
+Loaded genotype data
+Running TPOT
+	Phenotype = p_cd4difw48w4
+	Population = 100
+	Permute = True
+	FSS settings:
+		file = ../02/c7.all.v7.0.symbols.csv (contains 4,873 sets)
+		1 set(s) chosen at a time (4,873 combinations)
+==============================
+Starting Training...
+
+Best pipeline: LassoLarsCV(AddIntercept(Binarizer(FeatureSetSelector(input_matrix, sel_subset=3185, subset_list=../02/c7.all.v7.0.symbols.csv), threshold=0.55)), normalize=False)
+5-fold Cross-Validation Scores
+	R^2 = 0.10701443254862801 Average (0.11422425389000335, 0.23005675325702957, 0.10712097721545899, 0.0958564623543896, -0.01218628397374144)
+Saved exome_vllogdifw48w4_results plot
+Finished running TPOT for vllogdifw48w4 Rep 77 at Mon Dec 14 15:26:22 EST 2020
+
+Best pipeline: LinearSVR(AddIntercept(Normalizer(FeatureSetSelector(input_matrix, sel_subset=1887, subset_list=../02/c7.all.v7.0.symbols.csv), norm=max)), C=20.0, dual=True, epsilon=0.1, loss=epsilon_insensitive, tol=0.1)
+5-fold Cross-Validation Scores
+	R^2 = 0.016415986693869743 Average (-0.07998201542852068, -0.07793570431779018, 0.15902679535127417, 0.16482964546841739, -0.08385878760403198)
+Saved exome_p_cd4difw48w4_results plot
+Finished running TPOT for p_cd4difw48w4 Rep 80 at Mon Dec 14 16:34:37 EST 2020
+
+Best pipeline: DecisionTreeRegressor(AddIntercept(AddIntercept(FeatureSetSelector(input_matrix, sel_subset=1430, subset_list=../02/c7.all.v7.0.symbols.csv))), max_depth=2, min_samples_leaf=11, min_samples_split=19)
+5-fold Cross-Validation Scores
+	R^2 = 0.09485084985423071 Average (-0.10010111255920862, 0.062071944574191185, 0.12547251813226545, 0.2882683876841682, 0.09854251143973736)
+Saved exome_vllogdifw48w4_results plot
+Finished running TPOT for vllogdifw48w4 Rep 78 at Mon Dec 14 16:39:20 EST 2020
+
+Best pipeline: RidgeCV(AddIntercept(MinMaxScaler(FeatureSetSelector(input_matrix, sel_subset=2893, subset_list=../02/c7.all.v7.0.symbols.csv))))
+5-fold Cross-Validation Scores
+	R^2 = 0.0831673190177713 Average (0.04482674386386032, 0.10841135148374725, -0.02346811424186468, 0.033797086004293875, 0.25226952797881974)
+Saved exome_vllogdifw48w4_results plot
+Finished running TPOT for vllogdifw48w4 Rep 79 at Mon Dec 14 16:40:21 EST 2020
+
+Best pipeline: LinearSVR(AddIntercept(Normalizer(FeatureSetSelector(input_matrix, sel_subset=817, subset_list=../02/c7.all.v7.0.symbols.csv), norm=l1)), C=15.0, dual=True, epsilon=0.0001, loss=squared_epsilon_insensitive, tol=0.1)
+5-fold Cross-Validation Scores
+	R^2 = 0.06809627493746837 Average (0.06957046342953477, 0.1305086677876679, 0.004244173059114953, 0.06565641332883343, 0.0705016570821908)
+Saved exome_vllogdifw48w4_results plot
+Finished running TPOT for vllogdifw48w4 Rep 80 at Mon Dec 14 16:56:56 EST 2020
+
+Best pipeline: ElasticNetCV(AddIntercept(AddIntercept(FeatureSetSelector(input_matrix, sel_subset=2552, subset_list=../02/c7.all.v7.0.symbols.csv))), l1_ratio=1.0, tol=0.1)
+5-fold Cross-Validation Scores
+	R^2 = 0.13061542946756965 Average (0.0994348046862007, 0.1121150936632983, 0.07626210234834085, 0.1648940315073637, 0.20037111513264472)
+Saved exome_p_cd4difw48w4_results plot
+Finished running TPOT for p_cd4difw48w4 Rep 79 at Mon Dec 14 17:03:38 EST 2020
+Job Ended at Mon Dec 14 17:03:38 EST 2020

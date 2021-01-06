@@ -1,0 +1,19 @@
+Job started on comp-sc-0147.acib.production.int.aci.ics.psu.edu at Wed Jan  6 13:00:49 EST 2021
+Loaded 250 residuals
+Loaded 187 samples, each with 29,659 bins
+179 samples in the data
+Loaded genotype data
+Processing permutations
+Processing replicates
+*** p_cd4difw48w4 - MSE Score: W = 6.179, pval = 3.22E-10 ***
+*** p_cd4difw48w4 - R^2 Score: W = 6.172, pval = 3.37E-10 ***
+Finished processing results for p_cd4difw48w4 at Wed Jan  6 13:25:09 EST 2021
+Loaded 250 residuals
+Loaded 187 samples, each with 29,659 bins
+179 samples in the data
+Loaded genotype data
+Processing permutations
+Processing replicates
+*** vllogdifw48w4 - MSE Score: W = 2.702, pval = 3.44E-03 ***
+*** vllogdifw48w4 - R^2 Score: W = 1.525, pval = 6.37E-02 ***
+Finished processing results for vllogdifw48w4 at Wed Jan  6 13:49:51 EST 2021

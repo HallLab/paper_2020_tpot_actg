@@ -1,0 +1,27 @@
+#!/bin/bash
+
+#PBS -l nodes=1:ppn=20:rhel7
+#PBS -l walltime=4:00:00
+#PBS -l pmem=12gb
+#PBS -A mah546_a_g_sc_default
+
+# Get started
+echo "Job started on $(hostname) at $(date)"
+
+# Set encoding
+export LC_ALL=en_US.utf-8
+export LANG=en_US.utf-8
+
+# Go to the correct place
+cd "$PBS_O_WORKDIR" || exit
+
+# Load conda and activate the environment
+module load anaconda3
+source activate /storage/work/j/jrm5100/python_venvs/venv_tpot
+
+for PHENOTYPE in p_cd4difw48w4 vllogdifw48w4; do
+    python score_pipelines.py $PHENOTYPE\
+                              --permutations "../03/permuted"\
+                              --replications "../03/replicates"
+    echo "Finished processing results for ${PHENOTYPE} at $(date)"
+done

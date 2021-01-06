@@ -3,5 +3,7 @@
 .RData
 .Ruserdata
 .DS_Store
-paper_2020_tpot_actg.Rproj
-for-submission
+.ipynb_checkpoints
+01/*_original.txt
+01/*_residuals.txt
+data
