@@ -14,9 +14,9 @@ plasma_per_scores <- read_delim('../04/vllogdifw48w4_permutation_scores.txt', de
   select(-Permutation)
 
 
-cd4_feats <- read_delim('../04/p_cd4difw48w4_feature_importances.txt', delim = '\t') %>% 
+cd4_feats <- read_delim('../04/p_cd4difw48w4_feature_importances_reformatted.txt', delim = '\t') %>% 
   mutate(type = 'Change in Absolute CD4 Count')
-plasma_feats <- read_delim('../04/vllogdifw48w4_feature_importances.txt', delim = '\t') %>% 
+plasma_feats <- read_delim('../04/vllogdifw48w4_feature_importances_reformatted.txt', delim = '\t') %>% 
   mutate(type = 'Change in plasma HIV RNA')
 
 
